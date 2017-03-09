@@ -1,11 +1,9 @@
-# source 'https://rubygems.org'
-
 require 'sinatra'
 require 'httparty'
 require 'json'
 
 post '/gateway' do
-  # return if params[:token] != ENV['SLACK_TOKEN']
+  return if params[:token] != ENV['SLACK_TOKEN']
   message = params[:text].gsub(params[:trigger_word], '').strip
 
   action, repo = message.split('_').map {|c| c.strip.downcase }
