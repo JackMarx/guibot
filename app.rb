@@ -1,7 +1,7 @@
-source 'https://rubygems.org'
+# source 'https://rubygems.org'
 
-gem 'sinatra'
-gem 'httparty'
+require 'sinatra'
+require 'httparty'
 require 'json'
 
 post '/gateway' do
