@@ -20,5 +20,5 @@ end
 
 def response_message message
   content_type :json
-  (text: message}).to_json
+  ({text: message}).to_json
 end
